@@ -13,6 +13,8 @@
 		E23772171B67E6A60029FD85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E23772151B67E6A60029FD85 /* Main.storyboard */; };
 		E23772191B67E6A60029FD85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E23772181B67E6A60029FD85 /* Assets.xcassets */; };
 		E237721C1B67E6A60029FD85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E237721A1B67E6A60029FD85 /* LaunchScreen.storyboard */; };
+		E23772251B67E7170029FD85 /* CHBeaconItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E23772241B67E7170029FD85 /* CHBeaconItem.m */; };
+		E237722A1B67E81D0029FD85 /* CHBeaconController.m in Sources */ = {isa = PBXBuildFile; fileRef = E23772291B67E81D0029FD85 /* CHBeaconController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		E23772181B67E6A60029FD85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E237721B1B67E6A60029FD85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E237721D1B67E6A60029FD85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E23772231B67E7170029FD85 /* CHBeaconItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CHBeaconItem.h; path = Model/CHBeaconItem.h; sourceTree = "<group>"; };
+		E23772241B67E7170029FD85 /* CHBeaconItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CHBeaconItem.m; path = Model/CHBeaconItem.m; sourceTree = "<group>"; };
+		E23772281B67E81D0029FD85 /* CHBeaconController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CHBeaconController.h; path = Controller/CHBeaconController.h; sourceTree = "<group>"; };
+		E23772291B67E81D0029FD85 /* CHBeaconController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CHBeaconController.m; path = Controller/CHBeaconController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,8 @@
 		E237720B1B67E6A60029FD85 /* BeaconTutorial */ = {
 			isa = PBXGroup;
 			children = (
+				E23772271B67E8030029FD85 /* Controller */,
+				E23772261B67E71B0029FD85 /* Model */,
 				E237720F1B67E6A60029FD85 /* AppDelegate.h */,
 				E23772101B67E6A60029FD85 /* AppDelegate.m */,
 				E23772121B67E6A60029FD85 /* ViewController.h */,
@@ -77,6 +85,24 @@
 				E237720D1B67E6A60029FD85 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E23772261B67E71B0029FD85 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E23772231B67E7170029FD85 /* CHBeaconItem.h */,
+				E23772241B67E7170029FD85 /* CHBeaconItem.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		E23772271B67E8030029FD85 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E23772281B67E81D0029FD85 /* CHBeaconController.h */,
+				E23772291B67E81D0029FD85 /* CHBeaconController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -110,6 +136,11 @@
 				TargetAttributes = {
 					E23772081B67E6A60029FD85 = {
 						CreatedOnToolsVersion = 7.0;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -152,6 +183,8 @@
 				E23772141B67E6A60029FD85 /* ViewController.m in Sources */,
 				E23772111B67E6A60029FD85 /* AppDelegate.m in Sources */,
 				E237720E1B67E6A60029FD85 /* main.m in Sources */,
+				E23772251B67E7170029FD85 /* CHBeaconItem.m in Sources */,
+				E237722A1B67E81D0029FD85 /* CHBeaconController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,7 +246,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -250,7 +283,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
